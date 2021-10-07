@@ -50,7 +50,7 @@ let buscadorMultiple = listaServicios.filter(serv => serv.servicio === search)
 console.log(buscadorMultiple);
 
 function elegirProducto(){
-    let producto = prompt("¿Cual quieres comprar?");
+    let producto = prompt("¿Cual quieres comprar?produccion/montaje/flyers/foto producto/analogico/combo analogico");
     carritoFinal(producto);
 }
 
@@ -70,9 +70,22 @@ function carritoFinal(producto){
         
     }
     verificar = false;
+    agregarAlCarrito();
 }
 
+function agregarAlCarrito(){
+    let otroProducto = prompt("Desea contratar otro servicio mas?(si/no)");
+
+    if(otroProducto == "si"){
+        elegirProducto();
+    }else if(otroProducto == "no"){
+        console.log(`Compraste ${carritoDeCompra.length} servicios. Total a abonar: $ ${carrito}`);
+        console.log(`Elementos en tu carrito de compras: ${carritoDeCompra}`);
+    }else{
+        alert("Escribelo de nuevo");
+        agregarAlCarrito();
+    }
+}
 elegirProducto();
 
-console.log(`Compraste ${carritoDeCompra.length} servicio. Total a abonar: $ ${carrito}`);
 
