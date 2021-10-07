@@ -45,7 +45,7 @@ listaServicios.forEach(serv => {
 }) 
 
 //elegir producto y comprar
-let search = prompt("¿Que servicio desea buscar?")
+let search = prompt("¿Que servicio desea buscar? produccion/montaje/flyers/foto producto/analogico/combo analogico")
 let buscadorMultiple = listaServicios.filter(serv => serv.servicio === search)
 console.log(buscadorMultiple);
 
@@ -67,11 +67,12 @@ function carritoFinal(producto){
            alert("El servicio que busca no es valido.")
            break;
        }
+        
     }
     verificar = false;
 }
 
 elegirProducto();
 
-console.log(`Compraste ${carritoDeCompra.length} servicios. Total a abonar: $ ${carrito}`);
+console.log(`Compraste ${carritoDeCompra.length} servicio. Total a abonar: $ ${carrito}`);
 
