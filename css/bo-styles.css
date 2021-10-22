@@ -1,0 +1,55 @@
+
+body{
+    background-color: #eee7da;
+}
+.formBo{
+    max-width: 3rem;
+    color: rgb(114, 57, 40);
+    font-family:'Raleway', sans-serif;
+    margin-left: 2rem;
+    padding: 1rem;
+    
+}
+label{
+    padding:10px 0px;
+}
+input{
+    border-color: floralwhite;
+    border-radius: 4px;
+}
+
+#btn-enviar{
+    border-radius: 4px;
+    padding: 5px ;
+    margin: 10px 0px;
+    background-color: #062fa177;
+    color:floralwhite;
+    border-color: floralwhite;
+}
+
+li{
+    list-style:none;
+    color:rgba(2, 1, 1, 0.692);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+#nueva-lista{
+    max-width: 80vw;
+    margin-left: 2.5rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+.card{
+    background-color: rgba(224, 141, 57, 0.555);
+    border-radius: 4px;
+    width: 200px;
+    margin: 10px;
+}
+
+p{
+    color: #051e63;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}

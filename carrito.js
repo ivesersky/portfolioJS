@@ -55,7 +55,7 @@ function elegirProducto(){
 }
 
 function carritoFinal(producto){
-    let productoLleva = producto.toLowerCase();
+    let productoLleva = producto
 
     for(let i = 0; i <listaServicios.length; i++){
        if(productoLleva == listaServicios[i].servicio){
