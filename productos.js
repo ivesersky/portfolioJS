@@ -53,4 +53,28 @@ listadoProductos.innerHTML += `
 `
 }
 
+//Inicio Carrito
+
+let carritoDeCompra = [];
+
+function guardarId(ide){
+    let ides = ide;
+    let carrito = document.getElementById(ides).id
+    console.log(carrito + "este es mi ide")
+    carritoDeCompra.push(listaServicios[ides])
+console.log(carritoDeCompra);
+
+carritoPrint.innerHTML += `
+    
+<div class="card" >
+
+<p class="card-text">${carritoDeCompra[carritoDeCompra.length-1].descripcionServicio}</p>
+<p class="card-text"> $ ${carritoDeCompra[carritoDeCompra.length-1].precio}</p>
+<button id="" class="btnEliminar">Eliminar</button>
+
+</div>
+`
+
+}
+
 
