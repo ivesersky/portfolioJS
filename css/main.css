@@ -175,6 +175,7 @@ li{
 
 .grilla-perfil .fotoPerfil img {
   height: 200px;
+  margin-top: 20px;
   border-radius: 20%;
   -webkit-box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.212);
           box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.212);
@@ -191,22 +192,25 @@ li{
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin: 20px;
+  margin: 10px;
+  padding: 15px;
 }
 
 .grilla-perfil .cajaPerfil h1 {
   margin-bottom: 20px;
   font-size: 80px;
-  color: #fff0e4;
+  color: #251d16;
   font-family: "Yeseva One", cursive;
+  text-align: center;
 }
 
 .grilla-perfil .cajaPerfil p {
   word-break: keep-all;
-  color: #f1f1f1;
+  color: #3f3636a2;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
-  text-align: left;
+  text-align: center;
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -220,9 +224,12 @@ li{
     text-align: left;
     font-size: 7rem !important;
   }
+  .inicio__figcap figcaption {
+    font-size: 18px !important;
+  }
   .inicio .inicio__container {
     width: 90vw;
-    height: 20vh;
+    height: 30vh;
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: 2fr;
         grid-template-rows: 2fr;
@@ -231,7 +238,7 @@ li{
             align-items: left;
   }
   .inicio .inicio__container img {
-    width: 80%;
+    width: 90%;
     border-radius: 17%;
   }
   .grilla-perfil {
@@ -243,7 +250,7 @@ li{
   }
   .grilla-perfil .fotoPerfil img {
     height: 315px;
-    margin-top: 30px;
+    margin: 30px 40px ;
     border-radius: 10%;
   }
   .grilla-perfil .cajaPerfil {
@@ -251,12 +258,16 @@ li{
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: right;
-    margin: 0px 40px 20px 50px;
+    
+    margin: 0px 60px 20px 50px;
   }
   .grilla-perfil .cajaPerfil h1 {
     font-size: 14vw;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    text-align: right;
+  }
+  .grilla-perfil .cajaPerfil p {
+    text-align: right;
   }
   .flexVideos {
     -webkit-box-orient: horizontal;
@@ -283,21 +294,26 @@ li{
         grid-template-rows: repeat(3, 1fr);
   }
   .inicio .inicio__titulo h1 {
-    font-size: 8rem !important;
+    font-size: 9rem !important;
     text-align: left;
   }
+
+  .inicio__figcap figcaption {
+    font-size: 20px !important;
+  }
   .inicio .inicio__container {
+    margin: 0px;
     width: 90vw;
-    height: 20vh;
+    height: 40vh;
         grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: 2fr;
-        grid-template-rows: 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     -webkit-box-align: left;
         -ms-flex-align: left;
             align-items: left;
   }
   .inicio .inicio__container img {
-    width: 70%;
+    width: 75%;
     border-radius: 10%;
   }
   .grilla-perfil {
@@ -321,7 +337,8 @@ li{
     margin: 10px 4rem 20px;
   }
   .grilla-perfil .cajaPerfil h1 {
-    font-size: 10vw;
+    font-size: 10vw;    text-align: right;
+
   }
   .grilla-perfil .cajaPerfil p {
     margin-left: 10px;
@@ -361,10 +378,11 @@ body::-webkit-scrollbar {
 }
 
 .inicio {
+  margin-bottom:60px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr;
+  -ms-grid-rows: 1fr 0.5fr 2fr;
+      grid-template-rows: 1fr 0.5fr 2fr;
   width: 99vw;
   grid-row-gap: 20px;
   -webkit-box-align: center;
@@ -372,11 +390,10 @@ body::-webkit-scrollbar {
           align-items: center;
   justify-items: center;
 }
-
 .inicio__titulo h1 {
   font-family: "Yeseva One", cursive, "Elsie", cursive;
   color: #50361f;
-  font-size: 3.5rem !important;
+  font-size: 3rem !important;
   font-weight: bold !important;
   text-align: center;
 }
@@ -411,19 +428,12 @@ body::-webkit-scrollbar {
           transform: scale(1.12);
 }
 
-.inicio__figcap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  height: 3rem;
-  margin: 20px;
-}
-
+ .inicio__figcap{
+   width: 60vw;
+ }
 .inicio__figcap figcaption {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
   text-align: center;
 }
 
