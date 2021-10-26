@@ -6,8 +6,9 @@ class Producto{
     }
    
    }
-   
-   
+
+let listaBack = []
+
 const imprimirDatos = () => {
     const producto = new Producto(
         {
@@ -34,7 +35,10 @@ const imprimirDatos = () => {
     
 document.getElementById("btn-enviar").addEventListener("click", (e) => {
     e.preventDefault()
-
+    
     imprimirDatos()
+    
+    
 })
+
 
