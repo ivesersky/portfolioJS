@@ -17,6 +17,15 @@ li{
   font-weight: bold;
   font-size: 16px;
 }
+.carritoCard{
+  margin: 10px;
+  background-color: #fedbd028;
+  width: auto;
+}
+.text-precio{
+  margin-top: 10px;
+  color: #000000b2;
+}
 .btnCentrar{
   display: flex;
   height: 40px;
@@ -35,6 +44,23 @@ li{
   font-size: 14px;
 }
 .btnContratar:hover{
+  background-color: #442C2E;
+  color: #f1ecea;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight:lighter;
+}
+.btnComprar{
+  width:100px;height: 35px;
+  background-color: #fedbd0bb;
+  color: #442C2E;
+  border-radius: 12px;
+  border:thin;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+}
+.btnComprar:hover{
   background-color: #442C2E;
   color: #FEDBD0;
   -webkit-transition: 0.3s;
