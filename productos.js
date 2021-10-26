@@ -1,4 +1,4 @@
-const listadoProductos = document.querySelector("#listadoProductos")
+const listadoContainer = document.querySelector("#listadoContainer")//container(padre) para cada itemServicio(hijo)
 const carritoPrint = document.querySelector("#carrito")
 let i;
 
@@ -10,27 +10,28 @@ class Producto{
     }
    
    }
-   //creo la lista y el carrito
-   let listaServicios = [];
+   //creo la lista
+   let itemServicio = [];
    
    
-   listaServicios.push(new Producto("Produccion de pieza audiovisual","Produccion", 15450))
-   listaServicios.push(new Producto( "Montaje y Posproduccion","Montaje", 8500))
-   listaServicios.push(new Producto( "Flyers promocionales","Flyers", 3750))
-   listaServicios.push(new Producto( "Foto Producto + Retoque digital","Foto producto", 9890))
-   listaServicios.push(new Producto( "Sesion 35mm (sin revelado)","Analogico I",  4085))
-   listaServicios.push(new Producto( "Sesion 35mm (incluye revelado x1)","Combo analogico", 5985))
+   itemServicio.push(new Producto("Produccion de pieza audiovisual","Produccion", 15450))
+   itemServicio.push(new Producto( "Montaje y Posproduccion","Montaje", 8500))
+   itemServicio.push(new Producto( "Flyers promocionales","Flyers", 3750))
+   itemServicio.push(new Producto( "Foto Producto + Retoque digital","Foto producto", 9890))
+   itemServicio.push(new Producto( "Sesion 35mm (sin revelado)","Analogico I",  4085))
+   itemServicio.push(new Producto( "Sesion 35mm (incluye revelado x1)","Combo analogico", 5985))
    
 
-for( i=0; i < listaServicios.length; i++){
 
-listadoProductos.innerHTML += `
+for( i=0; i < itemServicio.length; i++){
+
+listadoContainer.innerHTML += `
     
 <div class="card carritoCard" >
 <div class="card-body">
-<h5 class="card-text card-title">${listaServicios[i].descripcionServicio}</h5>
-<h7 class="card-subtitle mb-2 text-muted">${listaServicios[i].servicio}</h7>
-<h6 class="card-subtitle mb-2 text-precio">$ ${listaServicios[i].precio}</h6>
+<h5 class="card-text card-title">${itemServicio[i].descripcionServicio}</h5>
+<h7 class="card-subtitle mb-2 text-muted">${itemServicio[i].servicio}</h7>
+<h6 class="card-subtitle mb-2 text-precio">$ ${itemServicio[i].precio}</h6>
 <button id="${i}" class="btnComprar addToCart" onclick="guardarId(${i})"><i class="fas fa-cart-plus"></i> AGREGAR </button>
 </div>
 </div>
@@ -38,13 +39,14 @@ listadoProductos.innerHTML += `
 }
 
 // //Inicio Carrito
-var b;
+
 let carritoDeCompra = [];
 function guardarId(ide){
     let ides = ide;
     let carrito = document.getElementById(ides).id
-    carritoDeCompra.push(listaServicios[ides])
+    carritoDeCompra.push(itemServicio[ides])
 console.log(carritoDeCompra);
+
 carritoPrint.innerHTML += `
  
 <div class="card carritoCard itemAgregado">
@@ -54,19 +56,38 @@ carritoPrint.innerHTML += `
 </div>
 `;
 
-carritoIndex.querySelector('.btn-delete').addEventListener('click', removeItemCarrito);
 }
 
-function removeItemCarrito(event){
-    const buttonClicked = event.target;
-    buttonClicked.closest('.itemAgregado').remove();
-    console.log(buttonClicked);
+
+guardar_localstorage();
+//AGREGAR ITEM AL STORAGE
+function guardar_localstorage(){
+    localStorage.setItem('servicio',itemServicio);
+    
 }
 
-/*
-// no funciona  >:( 
-function eliminar(){
-    let list = document.getElementById('${i}');
-    b.removeChild(list.item(0));
-}
-*/
+
+
+
+
+
+
+
+// function removeItemCarrito(event){
+//     const buttonClicked = event.target;
+//     buttonClicked.closest('.itemAgregado').remove();
+//     console.log(buttonClicked);
+// }
+// const d= document;
+
+// const removeCard = (element) => {
+
+//     if(element.className === "itemAgregado"){
+//         element.parentElement.parentElement.remove();
+
+//     }
+// }
+
+// d.addEventListener('click', (e)=>{
+//     removeCard(e.target);
+// })
