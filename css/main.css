@@ -747,7 +747,10 @@ textarea.input {
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-
+.container-fluid .row p {
+    color: #000000b2;
+    font-weight: 500;
+}
 /*******Animaciones********/
 @-webkit-keyframes animate__fadeInLeft {
     0% {
