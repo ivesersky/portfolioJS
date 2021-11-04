@@ -1,0 +1,42 @@
+/*___________PERFIL.HTML__________*/
+.grilla-perfil{ 
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;width:99vw;
+    grid-row-gap: 20px;
+    align-content: center;
+    .fotoPerfil{
+        height: 20%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items:center;
+        flex-grow: 2;
+        img{
+           height: 200px;
+           border-radius: 20% ;
+           box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.212);
+       }
+    }
+    .cajaPerfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: $margen-min*2;
+        h1{
+           margin-bottom: $margen-min*2;
+           font-size: 80px ;
+           color: rgb(255, 240, 228);
+           font-family:  $font-Yeseva;
+       }
+       p {
+          word-break:keep-all;
+          color: rgb(241, 241, 241);
+          font-size: 14px;
+          font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
+         text-align:left;
+      }
+    }
+}
+
+
+

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Perfil </title>
-    <meta name="description" content="Artista multimedial, fotógrafa, directora artística, motion graphics designer, montajista y editora de videos de Buenos Aires, Argentina.">
-    <meta name="keywords" content="ARTISTA, PROFESIONAL, MODERNO, PROYECTOS,VIDEOS, MOTION GRAPHICS, DISEÑO GRAFICO">
+    <title> Contacto || Portfolio </title>
+    <meta name="description" content="Contacto para consultas y armado de presupuestos para producciones audiovisuales interdisciplinarias, presencial y/o a distancia."> 
+    <meta name="keywords" content="CONTACTO, TELEFONO, CABA, EMAIL, CORREO">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
     <!--FontAwesome SCRIPT -->
     <script src="https://kit.fontawesome.com/0407ded1a1.js" crossorigin="anonymous"></script>
-        <!--Animaciones-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    
     <link rel="stylesheet" href="./css/main.css">
+    
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@600&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@600&family=Yeseva+One&family=Rubik&display=swap" rel="stylesheet">
 
 </head>
-
 <body class="light-bgr">
   <header class="menu">
     <nav class="menu__desplegable navbar navbar-expand-lg navbar-light user-select-none ">
@@ -33,20 +33,20 @@
            </button>
            <div class="collapse navbar-collapse justify-content-start " id="navbarNav">
              <ul class="navbar-nav align-items-center">
-               <li class="nav-item menu__item">
+               <li class="nav-item menu__item menu__item--act">
                  <a class="nav-link " href="./index.html">HOME</a>
                </li>
-               <li class="nav-item menu__item menu__item--act">
-                <a class="nav-link active"  aria-current="page" href="#">PERFIL</a>
-              </li>
                <li class="nav-item menu__item">
+                <a class="nav-link" href="./perfil.html">PERFIL</a>
+              </li>
+              <li class="nav-item menu__item ">
                 <a class="nav-link" href="./galeria.html">GALERIA</a>
               </li>
               <li class="nav-item menu__item">
-                <a class="nav-link" href="">SHOP</a>
+                <a class="nav-link" href="./shop.html">SHOP</a>
               </li>
-              <li class="nav-item menu__item">
-                <a class="nav-link" href="./contacto.html">CONTACTO</a>
+              <li class="nav-item menu__item menu__item--act">
+                <a class="nav-link active" aria-current="page" href="#">CONTACTO</a>
               </li>
              </ul>
            </div>
@@ -55,18 +55,41 @@
        <hr class="menu__divisor  animate__animated animate__slideInLeft animate__slow">
 </header>
 
-    <div class="grilla-perfil">
-        <div class="fotoPerfil img-fluid animate__animated animate__slideInRight animate__slow "><img src="./img/fotoperfil.jpg" alt="foto principal"></div>
-
-        <section class="cajaPerfil animate__animated animate__fadeInLeft animate__slow"><!--FLEXBOX H1 Y TEXTO-->
-            <div >
-                <h1>Esersky Ivana</h1>  
-                <p>Artista multimedial, fotógrafa, directora artística, motion graphics designer, montajista y editora de videos nacida en el año 2000 y ubicada en la Ciudad de Buenos Aires. Con basta experiencia en el desarrollo y desenvolvimiento de proyectos artísticos independientes, hago uso de un amplio abanico de técnicas, herramientas y disciplinas para satisfacer las necesidades puntuales de cada proyecto, generando un discurso propio y llamativo, con un fuerte caracter profesional y moderno.</p>
-            </div>               
-        </section>
-
+<div class="container">
+   
+  <div class="form">
+    <div class="contact-info"></div>
+    <div class="contact-form">
+      <form action="./contacto.html">
+      <h3 class="titleContact">Contacto</h3>
+      <div class="input-container">
+        <input type="text" name="" class="input">
+        <label for="">Nombre</label>
+        <span>Nombre</span>
+      </div>
+      <div class="input-container ">
+        <input type="text" name="email" class="input">
+        <label for="">Email</label>
+        <span>Email</span>
+      </div>
+      <div class="input-container">
+        <input type="tel" name="phone" class="input">
+        <label for="">Telefono</label>
+        <span>Telefono</span>
+      </div>
+      <div class="input-container textarea">
+        <textarea name="message" class="input"></textarea>
+        <label for="">Mensaje</label>
+        <span>Mensaje</span>
+      </div>
+      <input type="submit" value="Enviar" class="btn">
+      </form>
     </div>
 
+  </div>
+</div>
+
+     
                <!--FOOTER-->
           <footer class="pie">
                 <ul class="pie__flex">
@@ -84,8 +107,9 @@
                      </li>
                  </ul>
            </footer> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+   
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
 </body>
-
 </html>

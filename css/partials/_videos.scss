@@ -1,0 +1,15 @@
+/*_________PROYECTOS.HTML_________*/
+.flexVideos{
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;align-items: center;
+    margin: 10px;
+    flex-basis: 390px;
+    iframe{
+        margin: 10px;
+        width: 90%;
+        border-radius: 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.308);
+    }
+}

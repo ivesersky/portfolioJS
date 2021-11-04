@@ -1,0 +1,119 @@
+
+
+@include media-mobile{
+    .menu__divisor{
+        visibility: hidden;
+    }
+}
+
+@include media-tablet{
+    .inicio{
+        .inicio__titulo h1{
+         text-align: left;
+         font-size: $size-titulo*2 !important;
+            
+        }
+        .inicio__container{
+            width: 90vw; height: 20vh;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 2fr;
+            align-items: left;
+            img{
+             width: 80%;
+             border-radius: 17%;
+            }
+        }         
+     
+    }
+    .grilla-perfil{
+        width: 100%;
+        height: 70vh;
+        grid-template-columns: 250px 1fr;
+        margin: $margen-min;
+        .fotoPerfil img{
+            height:315px;
+            margin-top: 30px;
+            border-radius: 10%;  
+        }
+        .cajaPerfil{
+            flex-direction: column;
+            text-align: right;
+            margin: 0px 40px 20px 50px;
+            h1{
+               font-size: 14vw;
+               margin-bottom: 20px;
+           }
+        }
+    } 
+    .flexVideos {
+        flex-flow: row wrap; 
+        width: 100vw;
+        iframe{
+          width: 40%;
+        }
+    } 
+}
+
+@include media-desktop{
+    .menu__divisor{
+        height: $margen-min/2 ;width: 100vw;
+        background: #ffffff;
+        background: -moz-radial-gradient(circle, $blanco 0%, rgba(100, 100, 100, 1) 0%, $blanco  100%);
+        background: -webkit-radial-gradient(circle, $blanco 0%, rgba(100,100, 100,1) 0%, $blanco 100%);
+        background: radial-gradient(circle, $blanco 0%, rgba(100,100, 100,1) 0%, $blanco 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    }  
+    .inicio{
+     height: 100vh;
+     grid-template-rows:repeat(3,1fr);
+        .inicio__titulo h1{
+          font-size: $size-titulo*3 !important;
+          text-align: left;
+        }
+        .inicio__container{
+         width: 90vw; height: 20vh;
+         grid-template-columns: repeat(4,1fr);
+         grid-template-rows: 2fr;
+         align-items: left;
+         img{
+          width: 80%;
+          border-radius: 10%;
+         }
+        } 
+    }  
+    .grilla-perfil{
+        width: 100vw;
+        height: 75vh;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr;
+        .fotoPerfil{
+            margin: $margen-min;
+            height:415px;;
+            img{
+               height: 500px;
+               border-radius: 3%;
+           }
+        }
+        .cajaPerfil{
+            text-align: right;
+            margin: $margen-min $margen-max 20px;
+            h1{
+               font-size: 10vw;
+           }
+           p{
+               margin-left: $margen-min;
+               text-align: right;
+           }
+        }
+    }   
+   
+    .flexVideos {
+        flex-flow: row wrap; 
+        height: 90vh;
+        
+        iframe{
+          width: 30%;
+          border-radius: 3%;
+        }
+    }
+}
