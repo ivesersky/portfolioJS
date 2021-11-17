@@ -98,7 +98,7 @@ li {
 }
 
 .card-columns {
-    margin: 2rem;
+    margin: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -111,28 +111,23 @@ li {
     justify-content: space-evenly;
 }
 
-.card-columns .card {
+.card-columns .card img {
+    background-color: transparent;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin: 1rem;
+    margin: 10px;
+    width: 80vw;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     -webkit-transition: -webkit-transform 1.5s;
     transition: -webkit-transform 1.5s;
     transition: transform 1.5s;
     transition: transform 1.5s, -webkit-transform 1.5s;
-    background-color: #20262a;
-}
-
-.card-columns .card .card-title {
-    font-family: "PT Serif", serif;
-    color: #1d1616ce;
-    text-align: center;
-    font-size: 24px;
 }
 
 .card-columns .card:hover {
@@ -142,6 +137,7 @@ li {
 
 .round-borders {
     border-radius: 6px;
+    background-color: transparent;
 }
 
 /*_________PROYECTOS.HTML_________*/
