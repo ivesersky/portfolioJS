@@ -21,6 +21,7 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
+
 .menu {
     &__desplegable {
         margin: $margen-max/4;
@@ -29,7 +30,7 @@ body::-webkit-scrollbar {
 
 .inicio {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
     width: 99vw;
     grid-row-gap: 20px;
     align-items: center;

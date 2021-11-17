@@ -21,7 +21,7 @@ class Producto{
    itemServicio.push(new Producto( 3, "Flyers promocionales","Flyers", 3750))
    itemServicio.push(new Producto( 4, "Foto Producto + Retoque digital","Foto producto", 9890))
    itemServicio.push(new Producto( 5, "Sesion 35mm (sin revelado)","Analogico I",  4085))
-   itemServicio.push(new Producto( 6, "Sesion 35mm (incluye revelado x1)","Combo analogico", 5985))
+   itemServicio.push(new Producto( 6, "Sesion 35mm (incluye revelado x1)","Analogico II", 5985))
    
 
 //SERVICIOS---------
@@ -33,7 +33,7 @@ listadoContainer.innerHTML += `
 <div class="card-body">
 <div  class="imgProd" ><img src="./img/${i}transp.png" alt=""></div>
 <h5 class="card-text card-title">${itemServicio[i].descripcionServicio}</h5>
-<h7 class="card-subtitle mb-2 text-muted">${itemServicio[i].servicio}</h7>
+<h7 class="card-subtitle mb-2 ">${itemServicio[i].servicio}</h7>
 <h6 class="card-subtitle mb-2 text-precio">$ ${itemServicio[i].precio}</h6>
 <button id="${i}" class="btnComprar addToCart" onclick="guardarId(${i})"><i class="fas fa-cart-plus"></i> AGREGAR </button>
 <button id="${i}" class="btn-ocultar btnComprar">VER +/-</button>
@@ -107,11 +107,7 @@ const remove_localstorage = (element) =>{
 
 //JQUERY
 
-
-$(".btnComprar.addToCart").click((e)=>{
-    alert("Estas por comprar el servicio n°" + " " + e.target.id);
-});
-
+ 
 
 
 

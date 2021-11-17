@@ -1,7 +1,16 @@
 /*esto es para EL TITULO DEL INDEX*/
 /*esto es para EL EPIGRAFE DE IMG GALERIA antes figcaption*/
-@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@900&family=Yeseva+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@font-face {
+    font-family: "Futura Bold";
+    src: url(file:/C:/PortfolioJS_Esersky/css/fonts/Futura-Bold.otf)
+        format(opentype);
+}
+
+@font-face {
+    font-family: "Futura T Bold";
+    src: url(file:/C:/Users/ivana/Documents/CC_FRONTEND/JAVASCRIPT/PortfolioJS_Esersky/css/fonts/Futura-T-Bold.ttf)
+        format(truetype);
+}
 
 html {
     scroll-behavior: smooth;
@@ -60,7 +69,7 @@ li {
 }
 
 .dark-bgr {
-    background-color: #2c2924;
+    background-color: #341a18;
 }
 
 .dark-bgr2 {
@@ -68,11 +77,24 @@ li {
 }
 
 .light-bgr {
-    background-color: #fffef4;
+    background-color: #dddac5;
 }
 
 .green-bgr {
     background-color: #bfc3a2;
+}
+.red-bgr {
+    background-color: #db332d;
+}
+.sky-bgr {
+    background-color: #6fa9b9; /*#6f76a8*/
+}
+.navbar-toggler {
+    border-color: transparent;
+    border-width: 0px;
+}
+.invert {
+    filter: invert(90%);
 }
 
 .card-columns {
@@ -158,14 +180,12 @@ li {
     -ms-grid-rows: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
     height: 100vh;
-    width: 99vw;
+    width: 94vw;
     grid-row-gap: 20px;
     -ms-flex-line-pack: center;
-    align-content: center;
 }
 
 .grilla-perfil .fotoPerfil {
-    height: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,9 +202,8 @@ li {
 }
 
 .grilla-perfil .fotoPerfil img {
-    height: 200px;
     margin-top: 20px;
-    border-radius: 20%;
+    border-radius: 4px;
     -webkit-box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.212);
     box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.212);
 }
@@ -205,19 +224,21 @@ li {
 }
 
 .grilla-perfil .cajaPerfil h1 {
-    margin-bottom: 20px;
-    font-size: 80px;
-    color: #251d16;
-    font-family: "Yeseva One", cursive;
+    font-family: "Futura Bold", sans-serif;
+    color: #1b0e0d;
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
     text-align: center;
+    word-break: break-all;
 }
 
 .grilla-perfil .cajaPerfil p {
-    word-break: keep-all;
+    word-break: normal;
+    word-spacing: 5px;
     color: #3f3636a2;
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
-    text-align: center;
+    font-family: "Raleway", sans-serif;
+    text-align: justify;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -235,21 +256,7 @@ li {
     .inicio__figcap figcaption {
         font-size: 18px !important;
     }
-    .inicio .inicio__container {
-        width: 75vw;
-        height: 25vh;
-        grid-template-columns: repeat(4, 1fr);
-        -ms-grid-rows: 2fr;
-        grid-template-rows: 2fr;
-        grid-gap: 20px;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
-    }
-    .inicio .inicio__container img {
-        width: 100%;
-        border-radius: 17%;
-    }
+
     .grilla-perfil {
         width: 95%;
         height: 70vh;
@@ -319,22 +326,7 @@ li {
     .inicio__figcap figcaption {
         font-size: 20px !important;
     }
-    .inicio .inicio__container {
-        margin: 0px;
-        width: 88vw;
-        height: 30vh;
-        grid-template-columns: repeat(4, 1fr);
-        -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 30px;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
-    }
-    .inicio .inicio__container img {
-        width: 100%;
-        border-radius: 10%;
-    }
+
     .grilla-perfil {
         width: 100vw;
         height: 75vh;
@@ -345,7 +337,7 @@ li {
     }
     .grilla-perfil .fotoPerfil {
         margin: 10px;
-        height: 415px;
+        height: auto;
     }
     .grilla-perfil .fotoPerfil img {
         height: 500px;
@@ -406,66 +398,39 @@ body::-webkit-scrollbar {
 .menu__desplegable {
     margin: 1rem;
 }
-
+.navbar-brand img {
+    width: 120px;
+}
 .inicio {
-    margin-bottom: 60px;
+    margin: 20px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 0.5fr 60px 2fr;
-    grid-template-rows: 1fr 0.5fr 60px 2fr;
-    width: 99vw;
+    -ms-grid-rows: 1fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    width: 85vw;
     grid-row-gap: 10px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    justify-items: center;
+    -webkit-box-align: left;
+    -ms-flex-align: left;
+    align-items: left;
+    justify-items: left;
 }
+
 .inicio__titulo h1 {
-    font-family: "Yeseva One", cursive, "Elsie", cursive;
-    color: #50361f;
-    font-size: 3.5rem !important;
-    font-weight: bold !important;
-    text-align: center;
+    font-family: "Futura Bold", sans-serif;
+    color: #160101;
+    font-size: 6rem !important;
+    font-weight: 800 !important;
+    text-align: left;
+    word-break: break-all;
 }
 
-.inicio__container {
-    display: -ms-grid;
-    display: grid;
-    margin: 0px 10px 50px;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    height: 30vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-}
-
-.inicio__container img {
-    width: 80%;
-    border-radius: 70%;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-    -webkit-transition: -webkit-transform 1.2s;
-    transition: -webkit-transform 1.2s;
-    transition: transform 1.2s;
-    transition: transform 1.2s, -webkit-transform 1.2s;
-}
-
-.inicio__container img:hover {
-    -webkit-transform: scale(1.12);
-    transform: scale(1.12);
-}
-
-.inicio__figcap {
-    width: 60vw;
-}
 .inicio__figcap figcaption {
-    font-family: "Rubik", sans-serif;
-    font-size: 12px;
-    text-align: center;
+    font-family: "Futura T Bold", sans-serif;
+    color: #341a18;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    word-break: keep-all;
 }
 /******* SERVICIOS SHOP.HTML******/
 
@@ -481,11 +446,11 @@ body::-webkit-scrollbar {
     grid-gap: 1rem;
 }
 .tituloServ {
-    font-family: "Rubik", sans-serif;
-    font-size: 24px;
-    color: transparent;
-    color: #442c2eda;
-    font-weight: bold;
+    font-family: "Futura T Bold", sans-serif;
+    font-size: 42px;
+    color: #160101;
+    font-weight: 800;
+    margin: 10px;
 }
 .carritoCard {
     display: -webkit-box;
@@ -512,8 +477,10 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
 }
-.carritoCard.imgProd {
+.carritoCard.imgProd,
+img {
     position: relative;
+    width: 40%;
     -ms-grid-column-span: span 4;
     grid-column-start: span 4;
     grid-column-end: auto;
@@ -522,7 +489,8 @@ body::-webkit-scrollbar {
 .card-title {
     color: #000000b2;
 }
-.text-precio {
+.text-precio,
+.card-subtitle {
     margin-top: 10px;
     color: #000000b2;
 }
@@ -533,29 +501,12 @@ body::-webkit-scrollbar {
     align-items: center;
     margin: 10px 20px;
 }
-.btnContratar {
-    width: 110px;
-    height: 40px;
-    background-color: #fedbd0;
-    color: #442c2e;
-    border-radius: 12px;
-    border: thin;
-    font-family: "Rubik", sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-}
-.btnContratar:hover {
-    background-color: #442c2e;
-    color: #f1ecea;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    font-weight: lighter;
-}
+
 .btnComprar {
     width: 100px;
     height: 35px;
-    background-color: #fedbd0bb;
-    color: #442c2e;
+    background-color: #1b0404d5;
+    color: #dddac5;
     border-radius: 12px;
     border: thin;
     font-family: "Rubik", sans-serif;
@@ -563,8 +514,7 @@ body::-webkit-scrollbar {
     font-size: 14px;
 }
 .btnComprar:hover {
-    background-color: #442c2e;
-    color: #fedbd0;
+    filter: invert(100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
 }
@@ -746,6 +696,9 @@ textarea.input {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+.pie__flex i {
+    color: #341a;
 }
 .container-fluid .row p {
     color: #000000b2;
