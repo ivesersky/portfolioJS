@@ -12,7 +12,6 @@
 }
 
 body {
-    background-color: $color-body;
     height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -24,54 +23,6 @@ body::-webkit-scrollbar {
 .menu {
     &__desplegable {
         margin: $margen-max/4;
-    }
-}
-
-.inicio {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    width: 99vw;
-    grid-row-gap: 20px;
-    align-items: center;
-    justify-items: center;
-    &__titulo {
-        h1 {
-            font-family: $font-Yeseva, $font-Elsie;
-            color: $marron-claro;
-            font-size: $size-titulo !important;
-            font-weight: bold !important;
-            text-align: center;
-        }
-    }
-    &__container {
-        display: grid;
-        margin: $margen-min;
-        width: 80vw;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: $margen-min * 2;
-        align-items: center;
-        justify-items: center;
-        img {
-            width: 80%;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-            transition: transform 1.2s;
-        }
-        img:hover {
-            transform: scale(1.12);
-        }
-    }
-    &__figcap {
-        display: flex;
-        align-self: flex-end;
-        height: 3rem;
-        margin: $margen-min * 2;
-        figcaption {
-            font-family: $font-Raleway;
-            font-size: $sz-figcap;
-            text-align: center;
-        }
     }
 }
 

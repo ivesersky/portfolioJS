@@ -27,6 +27,24 @@ li {
     font-size: 16px;
 }
 
+.color-blocks {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    margin: 30px 20px;
+}
+.color-blocks .block {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.color-blocks a {
+    color: transparent;
+}
+.color-blocks .block:hover {
+    border: 2px solid rgba(12, 9, 9, 0.63);
+    transition: 1s;
+}
 /*iconos del footer*/
 .icono--instagram {
     color: #858383c4;
@@ -81,14 +99,18 @@ li {
 }
 
 .green-bgr {
-    background-color: #bfc3a2;
+    background-color: #069754;
 }
 .red-bgr {
     background-color: #db332d;
 }
-.sky-bgr {
-    background-color: #6fa9b9; /*#6f76a8*/
+.red-bgr2 {
+    background-color: #ff914d;
 }
+.sky-bgr {
+    background-color: #6f9bb9; /*#6f76a8*/
+}
+
 .navbar-toggler {
     border-color: transparent;
     border-width: 0px;
@@ -395,22 +417,28 @@ body::-webkit-scrollbar {
     margin: 1rem;
 }
 .navbar-brand img {
-    width: 120px;
+    width: 80px;
 }
 .inicio {
     margin: 20px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 0.5fr;
-    grid-template-rows: 1fr 0.5fr;
-    width: 85vw;
+    -ms-grid-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    width: 88vw;
+    height: 70vh;
     grid-row-gap: 10px;
     -webkit-box-align: left;
     -ms-flex-align: left;
     align-items: left;
     justify-items: left;
 }
-
+.inicio__titulo {
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    margin-right: 20px;
+}
 .inicio__titulo h1 {
     font-family: "Futura Bold", sans-serif;
     color: #160101;
@@ -418,9 +446,17 @@ body::-webkit-scrollbar {
     font-weight: 800 !important;
     text-align: left;
     word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-chars: auto 3;
 }
-
+.inicio__figcap div {
+    width: 50vw;
+}
 .inicio__figcap figcaption {
+    margin-bottom: 20px;
     font-family: "Futura T Bold", sans-serif;
     color: #341a18;
     font-size: 1.5rem;
@@ -539,7 +575,7 @@ img {
     grid-template-columns: repeat(2, 1fr);
 }
 .contact-info {
-    background-color: ghostwhite;
+    background-color: rgb(0, 0, 0);
 }
 .contact-form {
     background-color: #643c2d;
@@ -674,8 +710,9 @@ textarea.input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 99vw;
+    position: absolute;
 }
 
 .pie__flex {
