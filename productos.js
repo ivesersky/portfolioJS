@@ -29,7 +29,7 @@ for( i=0; i < itemServicio.length; i++){
 
 listadoContainer.innerHTML += `
     
-<div class="card carritoCard" >
+<div class="carritoCard" >
 <div class="card-body">
 <div  class="imgProd" ><img src="./img/${i}transp.png" alt=""></div>
 <h5 class="card-text card-title">${itemServicio[i].descripcionServicio}</h5>
@@ -53,7 +53,7 @@ console.log(carritoDeCompra);
 
 carritoPrint.innerHTML += `
  
-<div class="card carritoCard agregado">
+<div class="carritoCard agregado">
 <div class="card-body "  id="${carritoDeCompra[carritoDeCompra.length-1].id}">
 <h6 class="card-text card-title">${carritoDeCompra[carritoDeCompra.length-1].descripcionServicio}</h6>
 <h7 class="card-subtitle mb-2 text-precio">$  ${carritoDeCompra[carritoDeCompra.length-1].precio}</h7>
@@ -103,12 +103,6 @@ const remove_localstorage = (element) =>{
  
  localStorage.setItem('id', JSON.stringify(carritoDeCompra))
 }
-
-
-//JQUERY
-
- 
-
 
 
 
